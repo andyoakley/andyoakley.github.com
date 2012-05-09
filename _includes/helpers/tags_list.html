@@ -1,0 +1,48 @@
+{% comment %}<!--
+The tags_list include is a listing helper for tags.
+Usage:
+  1) assign the 'tags_list' variable to a valid array of tags.
+  2) include helpers/tags_list.html.
+  example:
+    <ul>
+  	  {% assign tags_list = site.tags %}
+  	  {% include helpers/tags_list.html %}
+  	</ul>
+
+  Notes:
+    Tags can be either a Hash of tag objects (hashes) or an Array of tag-names (strings).
+    The encapsulating 'if' statement checks whether tags_list is a Hash or Array.
+    site.tags is a Hash while page.tags is an array.
+
+  This helper can be seen in use at: ../_layouts/default.html
+-->{% endcomment %}
+
+var dt = new google.visualization.DataTable(
+     {
+       cols: [{id: 'task', label: 'Label', type: 'string'},
+                {id: 'hours', label: 'Value', type: 'number'},
+              {id: 'link', label: 'Link', type: 'string'}],
+       rows: [
+
+
+{% if tags_list.first[0] == null %}
+  {% for tag in tags_list %}
+    {% if tag != 'Daily photo' and site.tags[tag].size > 1 %}
+      {c:[{v: '{{ tag }}'}, {v: {{ site.tags[tag].size }} }, {v: '#{{ tag }}-ref'}]},
+    {% endif %}
+ {% endfor %}
+{% else %}
+  {% for tag in tags_list %}
+    {% if tag[0] != 'Daily photo' and tag[1].size > 1 %}
+      {c:[{v: '{{ tag[0] }}'}, {v: {{ tag[1].size }} }, {v: '#{{ tag[0] }}-ref'}]},
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign tags_list = null %}
+
+
+             ]
+     },
+   0.6
+)

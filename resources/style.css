@@ -1,0 +1,47 @@
+/*
+Theme Name: Journalist - andyoakley
+Template: journalist
+*/
+
+@import url("journalist.css");
+
+
+#bubble {
+  display: none;
+}
+
+#footer {
+display: none;
+}
+
+div.main {
+  margin-bottom: 50px;
+}
+
+.meta {
+  display: none;
+}
+
+.navigation {
+  background: #ffffff;
+  border: none;
+}
+
+
+.comments {
+  display: none;
+}
+
+blockquote {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* here on are site specifc */
+.highlight {
+    background: #efefef;
+    padding: 10px;
+    margin-bottom: 12px;
+    overflow: auto;
+}
