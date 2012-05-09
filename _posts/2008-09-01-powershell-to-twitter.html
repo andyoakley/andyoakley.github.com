@@ -1,0 +1,47 @@
+--- 
+layout: post
+title: Powershell to Twitter
+published: true
+meta: 
+  geo_public: "1"
+  geo_longitude: "-122.291892"
+  _edit_last: "4526018"
+  geo_latitude: "47.664995"
+  _wpas_done_twitter: "1"
+  _wordbooker_extract: I have too much time on my hands this morning. The following script makes it easy to get and set Twitter status. I've seen similar ones elsewhere but they all seemed to have external dependencies, this one does not.
+  geo_accuracy: "2151"
+  geo_address: "98105"
+tags: 
+- Powershell
+- Technology
+- twitter
+type: post
+status: publish
+---
+I have too much time on my hands this morning. The following script makes it easy to get and set Twitter status. I've seen similar ones elsewhere but they all seemed to have external dependencies, this one does not.
+
+[sourcecode language="powershell"]
+#twitter.ps1:
+$script:username = &quot;foo&quot;
+$script:password = &quot;bar&quot;
+function get-twitter
+{
+ $wc = new-object System.Net.Webclient
+ $wc.Credentials = new-object System.Net.NetworkCredential $script:username,$script:password 
+ $rest = $wc.DownloadString(&quot;&lt;a href=&quot;http://twitter.com/statuses/friends_timeline.xml&quot;&gt;http://twitter.com/statuses/friends_timeline.xml&lt;/a&gt;&quot;)
+ $xml = [xml]$rest
+ $xml.statuses.status
+}
+function set-twitter
+{
+ param($status)
+ $wc = new-object System.Net.Webclient
+ $wc.Credentials = new-object System.Net.NetworkCredential $script:username,$script:password 
+ [System.Reflection.Assembly]::LoadWithPartialName(&quot;System.Web&quot;) | out-null
+ $encodedstatus = [System.Web.HttpUtility]::UrlEncode($status)
+ $postdata = &quot;status=$encodedstatus&quot;
+ $postbytes = [System.Text.Encoding]::ASCII.GetBytes($postdata)
+ $wc.Headers.Add(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;)
+ [System.Text.Encoding]::ASCII.GetString($wc.UploadData(&quot;&lt;a href=&quot;http://twitter.com/statuses/update.xml&quot;&gt;http://twitter.com/statuses/update.xml&lt;/a&gt;&quot;, $postbytes))
+}
+[/sourcecode] 

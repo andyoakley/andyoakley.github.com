@@ -1,0 +1,79 @@
+--- 
+layout: post
+title: More PivotTables in PowerShell
+published: true
+meta: 
+  geo_public: "1"
+  geo_longitude: "-122.291892"
+  _edit_last: "4526018"
+  _wpas_done_twitter: "1"
+  _wpas_mess: "Blogged: More PivotTables in PowerShell: http://wp.me/pi05d-kn"
+  geo_latitude: "47.664995"
+  _wordbooker_extract: Similar to the Simple PivotTables in Excel script I wrote a while back, today I needed to do a different type of pivot by hierarchy. I had a flat table of rows which I wanted to group by several columns recursively.
+  geo_accuracy: "2151"
+  geo_address: "98105"
+tags: 
+- hierarchy
+- pivot
+- pivottable
+- Powershell
+type: post
+status: publish
+---
+Similar to the <a href="http://andyoakley.com/2009/10/31/simple-pivottables-in-powershell/">Simple PivotTables in Excel</a> script I wrote a while back, today I needed to do a different type of pivot by hierarchy. I had a flat table of rows which I wanted to group by several columns recursively.
+
+[sourcecode language="powershell"]
+# Given data such as
+#
+# A       B           C
+# ------- ----------- ----
+# red     lisbon      cat
+# blue    venice      dog
+# green   paris       cat
+# blue    london      dog
+# green   lisbon      fish
+# green   paris       cat
+#
+# Output the following
+#
+#  cat
+#     red
+#         lisbon           1
+#     green
+#         paris            2
+#  dog
+#     blue
+#         venice           1
+#         london           1
+#  fish
+#     green
+#         lisbon           1
+#
+# $list | output-hierarchy &quot;C&quot;,&quot;A&quot;,&quot;B&quot;
+
+function output-hierarchy
+{
+    param($hierarchy,$depth=0)
+    if ($depth -gt 5) { return }
+
+    $groups = $input | group $hierarchy[0]
+    foreach ($group in $groups)
+    {
+        if ($hierarchy.length -gt 1)
+        {
+            # Emit title at this level
+            &quot;`t&quot;*$depth + $group.name
+
+            $group.group | output-hierarchy $hierarchy[1..($hierarchy.length-1)] ($depth+1)
+        }
+        else
+        {
+            # Figure out how many spaces to right align count
+            $spacer=(60-$group.name.length-$depth-$group.group.count.tostring().length)
+
+            # End of the road, count the remaining items that fall into this category
+            &quot;`t&quot;*$depth + $group.name + &quot; &quot;*$spacer + $group.group.count
+        }
+    }
+}
+[/sourcecode] 

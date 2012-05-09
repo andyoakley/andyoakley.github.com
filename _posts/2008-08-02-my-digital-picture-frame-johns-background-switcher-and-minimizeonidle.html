@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: "My digital picture frame: John's Background Switcher and MinimizeOnIdle"
+published: true
+meta: 
+  _wordbooker_extract: Digital picture frames are getting cheaper and larger but they still have a way to go in terms of display quality, resolution, size and convenience before I'm going to invest. Meanwhile, I do have a decent 17" LCD attached to the wall in the kitchen co ...
+tags: 
+- digital picture frame
+- home made digital picture frame
+- minimize on idle
+- Technology
+type: post
+status: publish
+---
+<p>Digital picture frames are getting cheaper and larger but they still have a way to go in terms of display quality, resolution, size and convenience before I'm going to invest.</p> <p>Meanwhile, I do have a decent 17" LCD attached to the wall in the kitchen connected to a PC in the closet. Aside: The massive convenience of a built-in PC in the kitchen was not wholly obvious to me before I installed it but it has since become the most used console in the house.</p> <p>Rather than a screensaver, I use <a href="http://www.johnsadventures.com/software/backgroundswitcher">John's Background Switcher</a> which is a tool that among other things can be set up to poll Flickr for a set of photos and create various desktop backgrounds from randomly selected ones. Full screen, montages and photo mosaics are simple configuration options apart.</p> <p>The last trick is a scheduled task that performs the 'Toggle Desktop' to minimize all windows after a period of inactivity.</p> <p><a href="http://cid-caa1af1d5ee09254.skydrive.live.com/self.aspx/MinimizeOnIdle/ShowDesktop.scf">ShowDesktop.scf</a></p> <blockquote> <p>[Shell]<br />Command=2<br />IconFile=explorer.exe,3<br />[Taskbar]<br />Command=ToggleDesktop </p></blockquote> <p><a href="http://cid-caa1af1d5ee09254.skydrive.live.com/self.aspx/MinimizeOnIdle/setup.cmd">Installation</a> <blockquote> <p>copy ShowDesktop.scf %systemroot%<br />schtasks /create /sc onidle /i 15 /tn "Show Desktop" /tr "C:\Windows\System32\cmd.exe /c %systemroot%\ShowDesktop.scf"</p></blockquote>

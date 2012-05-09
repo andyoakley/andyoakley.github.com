@@ -1,0 +1,64 @@
+--- 
+layout: post
+title: Simple PivotTables in PowerShell
+published: true
+meta: 
+  geo_public: "1"
+  geo_longitude: "-122.291892"
+  _edit_last: "4526018"
+  geo_latitude: "47.664995"
+  _wpas_done_twitter: "1"
+  _wpas_mess: "Simple PivotTables in PowerShell: http://wp.me/pi05d-io"
+  _wordbooker_extract: Quick script for PivotTable-like functionality in PowerShell. I find myself using this a lot.
+  geo_accuracy: "2151"
+  geo_address: "98105"
+tags: 
+- excel
+- pivot
+- pivottable
+- Powershell
+- Technology
+type: post
+status: publish
+---
+Quick script for PivotTable-like functionality in PowerShell. I find myself using this a lot.
+
+[sourcecode language="powershell"]
+# Rotates a vertical set similar to an Excel PivotTable
+#
+# Given $data in the format:
+#
+# Category     Activity     Duration
+# ------------ ------------ --------
+# Management   Email               1
+# Management   Slides              4
+# Project A    Email               2
+# Project A    Research            1
+# Project B    Research            3
+#
+# with $keep = &quot;Category&quot;, $rotate = &quot;Activity&quot;, $value = &quot;Duration&quot;
+#
+# Return
+#
+# Category   Email Slides Research
+# ---------- ----- ------ --------
+# Management     1      4
+# Project A      2               1
+# Project B                      3
+
+$rotate = &quot;Activity&quot;
+$keep = &quot;Category&quot;
+$value = &quot;Duration&quot;
+
+$pivots = $data | select -unique $rotate | foreach { $_.Activity}
+
+$data |
+	group $keep |
+	foreach {
+		$group = $_.Group
+		$row = new-object psobject
+		$row | add-member NoteProperty $keep $_.Name
+		foreach ($pivot in $pivots) { $row | add-member NoteProperty $pivot ($group | where { $_.$rotate -eq $pivot } | measure -sum $value).Sum }
+		$row
+	}
+[/sourcecode] 

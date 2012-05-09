@@ -1,0 +1,34 @@
+--- 
+layout: post
+title: Post offices and the Bing Maps API
+published: true
+meta: 
+  _edit_last: "2"
+  _wpas_done_twitter: "1"
+  _wordbooker_extract: I spent an hour this morning hacking together a quick prototype that brought together Windows Azure hosting and storage, the Bing Maps SDK, and a set of photos that Amy and I have been collecting of US Post Offices. The result is a United States Post O ...
+tags: 
+- bing maps
+- maps
+- mashup
+- post office
+- post offices
+- Projects
+type: post
+status: publish
+---
+I spent an hour this morning hacking together a quick prototype that brought together Windows Azure hosting and storage, the Bing Maps SDK, and a set of photos that Amy and I have been collecting of US Post Offices. The result is a <a href="http://andyoakley.net/postoffices/">United States Post Offices mashup</a> which shows a map with pushpins for each post office for which which we have a photo.
+
+<a href="http://andyoakley.net/postoffices/"><img class="alignnone size-full wp-image-1154" title="postoffices" src="http://apoakley.files.wordpress.com/2009/11/postoffices.png" alt="postoffices" width="600" height="373" /></a>
+
+The practical part of this was really the experience rather than the output. In short, it was really surprisingly easy to pull together the pieces to make this work. It takes a little while to get Visual Studio set up as an Azure development platform but once that's done (once) it's trivial taking existing techniques and having them run cloud-enabled with barely any changes.
+
+A few resources that came in handy:
+<ul>
+	<li><a href="http://www.microsoft.com/windowsazure/">Windows Azure Platform</a></li>
+	<li><a href="http://azureblobclient.codeplex.com/">WPF Client for the Windows Azure Blob Storage</a></li>
+	<li><a href="http://johanneskebeck.spaces.live.com/blog/cns!42E1F70205EC8A96!9698.entry">Data Visualization with Bing Maps</a></li>
+	<li><a href="http://msdn.microsoft.com/en-us/library/bb429619.aspx">Bing Maps Control SDK 6.2</a></li>
+	<li><a href="http://www.microsoft.com/maps/isdk/ajax/">Bing Maps Interactive SDK</a></li>
+	<li><a href="http://blogs.msdn.com/cumgranosalis/archive/2007/07/30/image-resizer-for-vista-and-xp-just-a-right-click-away-from-explorer.aspx">Image Resizer</a> (convenient replacement for the great XP PowerToy that did the same thing)</li>
+</ul>
+After all that, two things are clear: it should be a good PDC this year and there are many more post offices yet to be visited.

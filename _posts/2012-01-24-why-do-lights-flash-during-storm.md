@@ -1,0 +1,9 @@
+---
+title: Why do the lights dim during a wind storm?
+layout: post
+---
+It's windy in Seattle this evening with gusts of 45-50 mph predicted over night. With the snow and freezing rain of last week there were some 250,000 residents without power and the local power utilities do great work in restoring service as quickly as possible in rather unpleasant conditions.
+
+Back to tonight, as often happens during windy weather, the power stays on but the lights dim, brighten and flash at random intervals. The reason for this, it turns out, is the [autorecloser](http://en.wikipedia.org/wiki/Autorecloser), a device which complements protection devices like circuit breakers by restoring a breaker if the fault is purely transient (e.g. a falling branch temporarily short circuits a power line on its way from tree to ground).
+
+>Residential customers in areas fed by affected overhead power lines can occasionally see the effects of an autorecloser in action. If the fault affects the customer's own distribution circuit, they may see one or several brief, complete outages followed by either normal operation (as the autorecloser succeeds in restoring power after a transient fault has cleared) or a complete outage of service (as the autorecloser exhausts its retries). If the fault is on an adjacent circuit, the customer may see several brief "dips" (sags) in voltage as the heavy fault current flows into the adjacent circuit and is interrupted one or more times. A typical manifestation would be the dip, or intermittent black-out, of domestic lighting during an electrical storm. Autorecloser action may result in electronic devices losing time settings, losing data in volatile memory, halting, restarting, or suffering damage due to power interruption. Owners of such equipment may need to protect electronic devices against the consequences of power interruptions.

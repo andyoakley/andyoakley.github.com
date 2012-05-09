@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Succinct thoughts on monitoring and alerts
+published: true
+meta: 
+  wordbooker_options: "a:19:{s:23:\"wordbook_default_author\";s:1:\"2\";s:23:\"wordbook_extract_length\";s:3:\"256\";s:21:\"wordbooker_like_width\";s:3:\"250\";s:25:\"wordbook_fbshare_location\";s:3:\"top\";s:24:\"wordbook_fblike_location\";s:3:\"top\";s:22:\"wordbook_fblike_action\";s:9:\"recommend\";s:27:\"wordbook_fblike_colorscheme\";s:4:\"dark\";s:20:\"wordbook_fblike_font\";s:5:\"arial\";s:22:\"wordbook_fblike_button\";s:12:\"button_count\";s:21:\"wordbook_fblike_faces\";s:5:\"false\";s:18:\"wordbook_attribute\";s:26:\"New post on AndyOakley.com\";s:29:\"wordbook_republish_time_frame\";s:2:\"10\";s:29:\"wordbooker_status_update_text\";s:35:\": New blog post :  %title% - %link%\";s:19:\"wordbook_actionlink\";s:3:\"300\";s:32:\"wordbook_description_meta_length\";s:1:\"0\";s:18:\"wordbook_page_post\";s:4:\"-100\";s:18:\"wordbook_orandpage\";s:1:\"2\";s:24:\"wordbooker_comment_email\";s:19:\"andy@andyoakley.com\";s:18:\"wordbook_noncename\";s:10:\"d642fb0d83\";}"
+  _edit_last: "2"
+  _wordbooker_extract: "Anyone running an online service would do well to read this great post on \xC2\xA0Monitoring Theory:\r\n\
+    Monitors can be\xC2\xA0informative,\xC2\xA0actionable, or both. By\xC2\xA0informative, I mean that the alert must tell you categorically that there is a problem. By\xC2\xA0actionable I  ..."
+  _wp_jd_bitly: http://ao.vc/hrCFDH
+  _jd_tweet_this: ""
+  _wp_jd_target: http://andyoakley.com/2011/03/23/succinct-thoughts-on-monitoring-and-alerts/
+tags: 
+- Software engineering
+type: post
+status: publish
+---
+Anyone running an online service would do well to read this great post on  <a href="http://teddziuba.com/2011/03/monitoring-theory.html">Monitoring Theory</a>:
+<blockquote>Monitors can be <strong style="font-weight: bold;">informative</strong>, <strong style="font-weight: bold;">actionable</strong>, or both. By <em style="font-weight: inherit; font-style: italic; font-size: 12px; font-family: inherit; vertical-align: baseline; padding: 0px; margin: 0px; border: 0px initial initial;">informative</em>, I mean that the alert must tell you categorically that there is a problem. By <em style="font-weight: inherit; font-style: italic; font-size: 12px; font-family: inherit; vertical-align: baseline; padding: 0px; margin: 0px; border: 0px initial initial;">actionable</em> I mean that receiving the alert must prompt some kind of immediate response.</blockquote>
+I strongly agree with the points in the post, including the thoughts on queues and consumers which often have the characteristic of making a complex system even more complex.
+
+I'll add one other: put alerts in place for things you 'know' to be true. Some of the most interesting failure scenarios I've seen have been foretold by 'this'll never fire' alerts.
