@@ -11,7 +11,9 @@ The device also comes with a USB port and corresponding Windows software to allo
 
 Here's an example for pulling the numbers in PowerShell:
 
-<script src="https://gist.github.com/2901757.js?file=gistfile1.ps1"></script>
+<script src="https://gist.github.com/2901757.js?file=gistfile1.ps1">
+
+</script>
 
 The stock solution has a few drawbacks: sometimes the numbers just stop getting updated, the memory leak requires regular restarts, and the level of granularity of the usage numbers of rounded to the minute.
 
