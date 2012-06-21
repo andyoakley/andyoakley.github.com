@@ -1,3 +1,8 @@
+---
+layout: post
+title: The Raspberry Pi and decline in Computer Science applicants
+---
+
 The [Raspberry Pi](http://www.raspberrypi.org/) looks like a fun device: compact, cheap, and quite capable. I'm on the waitlist for the next round of shipments and look forward to receiving a board in the future.
 
 Meanwhile I found the motivation behind the project on the [About page](http://www.raspberrypi.org/about) to be interesting:
