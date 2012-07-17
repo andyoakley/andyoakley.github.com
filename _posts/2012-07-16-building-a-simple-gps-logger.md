@@ -1,5 +1,6 @@
 ---
 title: Building a simple GPS logger
+layout: post
 ---
 In the spirit of "there's no data like more data" I've been looking for ways to generate a relatively high fidelity geospatial log of my location and travel behavior. There are commercial products on the market for this too but none did quite what I have in mind. The current unit is very simple and doesn't even have a separate microprocessor although I will likely need one as I add more functionality.
 
