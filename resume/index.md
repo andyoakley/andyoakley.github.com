@@ -37,7 +37,7 @@ Worked the Microsoft .NET Framework community web site - GotDotNet - and set up 
 B.A. Computer Science
 Jesus College, Cambridge University, England. 1998-2001.
 
-<img style="float:right; border: none" src="http://chart.apis.google.com/chart?cht=qr&chs=120x120&chld=L&choe=UTF-8&chl=MECARD%3AN%3AAndy+Oakley%3BTEL%3A%2B14257806255%3BURL%3Ahttp%5C%3A%2F%2Fwww.andyoakley.com%3BEMAIL%3Aandy%40andyoakley.com%3B%3B" alt="Andy Oakley" />
+<img style="float:right; border: none" src="http://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L&choe=UTF-8&chl=MECARD%3AN%3AAndy+Oakley%3BTEL%3A%2B14257806255%3BURL%3Ahttp%5C%3A%2F%2Fwww.andyoakley.com%3BEMAIL%3Aandy%40andyoakley.com%3B%3B" alt="Andy Oakley" />
 ##Contact details
 Email: <a href="andy@andyoakley.com">andy@andyoakley.com</a><br />
 Website: <a href="http://andyoakley.com">http://andyoakley.com</a><br />
