@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume
+title: Andy Oakley resume
 published: true
 meta:
 tags: []
@@ -43,10 +43,4 @@ Email: <a href="andy@andyoakley.com">andy@andyoakley.com</a><br />
 Website: <a href="http://andyoakley.com">http://andyoakley.com</a><br />
 Phone: +1-206-390-8449
 
----
 
-##Keywords
-Software design, data mining, big data, machine learning, web search, search ranking, search relevance, Bing, content publishing, project management.
-
-##Bio
-Andy Oakley is a Principal Program Manager Lead in the Bing team. He and his team build experimentation systems that enable mining of large data sources, employ machine learning for relevance and ranking systems, and ship these at scale across multiple global markets. Previously at Microsoft, Andy led the program management team responsible for building out the publishing platform behind the MSDN and TechNet web sites. Andy enjoys running, hiking, kung fu, photography and lives in Seattle with his wife Amy and daughter Amelia.
