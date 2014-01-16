@@ -1,4 +1,3 @@
 permalink: /:year/:month/:day/:title
-auto: true
 pygments: true
 production_url: http://andyoakley.com
