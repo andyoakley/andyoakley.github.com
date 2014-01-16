@@ -7,4 +7,6 @@ I've had a MacBook Air for the better part of a year now and been very pleased. 
 
 In fact, my only real complaint -- and it's a big one -- has been the low success rate when using the standard Apple Mini DisplayPort to VGA adapter with the various projector configurations at work. A majority of the time the machine simply won't drive the external display.
 
-Finally, thanks to a [thread](https://discussions.apple.com/thread/2784143?start=30&tstart=0) on apple.com, I discovered a pointer to the <a href="http://www.amazon.com/gp/product/B005AT2KTK/ref=as_li_ss_tl?ie=UTF8&tag=andyoaklecom-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B005AT2KTK">Cirago Mini DisplayPort to VGA Active Adapter (DPA2011)</a><img src="http://www.assoc-amazon.com/e/ir?t=andyoaklecom-20&l=as2&o=1&a=B005AT2KTK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. I'm delighted to report a 100% success rate so far!
+Finally, thanks to a [thread](https://discussions.apple.com/thread/2784143?start=30&tstart=0) on apple.com, I discovered a pointer to the [Cirago Mini DisplayPort to VGA Active Adapter (DPA2011)](http://www.amazon.com/gp/product/B005AT2KTK/ref=as_li_ss_tl?ie=UTF8&tag=andyoaklecom-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B005AT2KTK)
+
+I'm delighted to report a 100% success rate so far!
