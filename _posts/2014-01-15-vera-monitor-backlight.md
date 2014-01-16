@@ -9,6 +9,6 @@ I wrote a very simple app, [vera-monitor-backlight](https://github.com/andyoakle
 
 Tested with a [VeraLite](http://www.amazon.com/gp/product/B007005364/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B007005364&linkCode=as2&tag=andyoaklecom-20) home automation controller. You will likely need to change the `IP address` and `DeviceNum` parameters in the `OnUrl` and `OffUrl` variables to match your setup.
 
-Also serves as an example of how to use `RegisterPowerSettingNotification`, `WM_POWERBROADCAST`, and `PBT_POWERSETTINGCHANGE`, and `POWERBROADCAST_SETTING` in C#.
+Also serves as an example of how to use `RegisterPowerSettingNotification`, `GUID_CONSOLE_DISPLAY_STATE`, `WM_POWERBROADCAST`, and `PBT_POWERSETTINGCHANGE`, and `POWERBROADCAST_SETTING` in C#.
 
 [vera-monitor-backlight on Github](https://github.com/andyoakley/vera-monitor-backlight)
