@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: offline
 title: Andy Oakley resume
 published: true
 meta:
