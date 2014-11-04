@@ -1,35 +1,106 @@
-/*
-Theme Name: Journalist - andyoakley
-Template: journalist
-*/
 
-@import url("journalist.css");
-
-
-#bubble {
-  display: none;
+body {
+    background:#fff; 
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size:13px;
+    color:#222;
+    padding:0;
+    margin:0;
 }
 
-#footer {
-display: none;
+* {
+    padding:0;
+    margin:0;
 }
+
+a {
+    color:#047;
+    text-decoration:underline;
+}
+
+a:hover {
+    color:#c00;
+}
+
+#container {
+    width:900px;
+    margin:0 auto;
+    position:relative;
+}
+
+#container h1 {
+    font-size:30px;
+    font-weight:normal;
+    letter-spacing:-1px;
+    width:600px;
+    padding:32px 0 25px 0;
+}
+
+#container h1 a {
+    color:#222;
+    text-decoration:none;
+}
+
+#container h1 a:hover {
+    color:#c00;
+}
+
+#content {
+    float:left;
+}
+
+#content h2 {
+    font-size:20px;
+    margin:5px 0 7px 0;
+}
+
+#content h2 a {
+    color:#222;
+    text-decoration:none;
+}
+
+#content h2 a:hover {
+    color:#c00;
+}
+
+
+.main img {
+    padding:2px;
+    border:#ddd 2px solid;
+}
+
+.main a img {
+    padding:2px;
+    border:#0085b5 2px solid;
+}
+
+.main a:hover img {
+    padding:2px;
+    border:#ca0002 2px solid;
+}
+
+.main p {
+    line-height:18px;
+    margin:0 0 15px 0;
+}
+
+.main ol {
+    line-height:18px;
+    margin:0 0 15px 30px;
+}
+
+.main ul {
+    line-height:18px;
+    margin:0 0 15px 30px;
+}
+
+.main li {
+    margin:0 0 5px 0;
+}
+
 
 div.main {
-  margin-bottom: 50px;
-}
-
-.meta {
-  display: none;
-}
-
-.navigation {
-  background: #ffffff;
-  border: none;
-}
-
-
-.comments {
-  display: none;
+    margin-bottom: 50px;
 }
 
 blockquote {
@@ -38,10 +109,44 @@ blockquote {
 }
 
 
-/* here on are site specifc */
-.highlight {
-    background: #efefef;
-    padding: 10px;
-    margin-bottom: 12px;
-    overflow: auto;
+code {
+    background: #eeeeee;
+    padding: 2px;
 }
+
+
+hr {
+    border-top: 1px dotted #ddd;
+    border-bottom: none;
+    border-left: none;
+}
+
+#sidebar { 
+    float: none;
+    font-size: 12px;
+    margin: 20px 0 0 0;
+
+    text-align: center;
+}
+
+#sidebar p {
+    margin-bottom: 10px;
+}
+
+#sidebar ul {
+    display: inline-block;
+}
+
+
+#sidebar ul li {
+    float: left;
+    margin-right: 25px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#sidebar ul li:first-child {
+    list-style-type: none;
+}
+
+
