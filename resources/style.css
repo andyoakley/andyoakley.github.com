@@ -47,6 +47,7 @@ a:hover {
 
 #content {
     float:left;
+    width: 100%;
 }
 
 #content h2 {
@@ -110,8 +111,14 @@ blockquote {
 
 
 code {
-    background: #eeeeee;
+    background: #0e0e0e;
     padding: 2px;
+}
+
+.org-src-container {
+    background: #545454;
+    padding: 10px;
+    color: white;
 }
 
 
