@@ -1,0 +1,32 @@
+#+BEGIN_HTML
+---
+layout: post
+categories:
+ - R
+title: Scraping Bing
+---
+#+END_HTML
+
+$x \times y$
+
+#+BEGIN_SRC python
+from bs4 import BeautifulSoup
+import requests
+import re
+
+r = requests.get('http://www.bing.com/search?q=seatac&qs=n&form=QBRE')
+
+data = r.text
+
+soup = BeautifulSoup(data)
+
+answer_tag = {'class':re.compile('b_entityTitle')}
+
+
+
+for link in soup.find_all('a'):
+    print(link.get('href'))
+
+for answer in soup.find_all(attrs=answer_tag):
+    print(answer.text)
+#+END_SRC
