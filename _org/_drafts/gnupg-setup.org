@@ -1,0 +1,38 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Setting up GnuPG with a Yubikey
+---
+#+END_HTML
+
+This was way more complicated than it should be.
+
+
+*** Multiple smartcards
+Almost all of my machines have multiple smartcard readers or TPMs.
+
+In =%HOME%\AppData\Roaming\gnupg\scdaemon.conf=, add the line
+#+BEGIN_SRC text
+reader-port Yubico Yubikey Neo OTP+CCID 0
+#+END_SRC
+
+*** PuTTy support
+In =%HOME%\AppData\Roaming\gnupg\gpg-agent.conf=, add the line
+#+BEGIN_SRC text
+enable-putty-support
+#+END_SRC
+
+*** Key generation
+This part was largely directed by Simon Josefsson's post [[http://blog.josefsson.org/2014/06/23/offline-gnupg-master-key-and-subkeys-on-yubikey-neo-smartcard/][Offline GnuPG Master Key and Subkeys on YubiKey NEO Smartcard]]. The basic steps are:
+
+1. Generate a key
+2. Create subkeys for signing, encryption and authentication
+3. Move the three subkeys to the Yubikey
+
+
+*** Stub generation
+#+BEGIN_SRC text
+gpg-connect-agent learn /bye
+
+#+END_SRC
+

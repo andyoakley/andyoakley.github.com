@@ -1,0 +1,49 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Blogging with Emacs Org-mode and Jekyll
+---
+#+END_HTML
+
+This is my test post
+
+#+BEGIN_SRC C
+  void main(int argc)
+  {
+    i = i+1;
+    for (int j=0; j<1; j++)
+      {
+        sprintf("%s %s", j, i);
+      }
+  }
+
+
+#+END_SRC
+
+The following is some R code
+
+#+BEGIN_SRC R
+  foot <- data.frame('x')
+
+#+END_SRC
+
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+|---+---+---|
+|   |   |   |
+
+
+** Next section
+
+** Additional section
+
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+
+$\sqrt{b}$
+xy
+
+In the flow $a+b+c$ is something we compute.

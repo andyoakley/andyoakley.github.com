@@ -1,0 +1,65 @@
+#+BEGIN_HTML
+---
+layout: post
+categories:
+ - R
+title: Airport extraction
+---
+#+END_HTML
+
+#+NAME: top5
+#+BEGIN_SRC R :colnames yes :results value :exports both
+  # Load wikipedia airports
+  library(XML)
+  tables <- readHTMLTable('http://en.wikipedia.org/wiki/List_of_airports_in_the_United_States')
+
+  # filter out blanks
+  airports <- subset(tables[[4]], FAA !='')
+
+  # convert to numeric
+  airports$Enplanements <- as.numeric(gsub(",","",airports$Enplanements))
+
+  # show histogram
+  hist(airports$Enplanements, breaks=300)
+
+  # show top 5
+  head(airports[order(-airports$Enplanements),c('City','Enplanements')],5)
+
+  #airports
+
+
+  #tables <- readHTMLTable('http://en.wikipedia.org/wiki/Wiley_Post%E2%80%93Will_Rogers_Memorial_Airport')
+
+  #tables[[1]]$V2[8]
+
+  #airports$foo <- apply(airports, FUN=nchar(City))
+  #apply(airports$City, FUN=nchar)
+#+END_SRC
+
+This is the output
+#+RESULTS: top5
+| City              | Enplanements |
+|-------------------+--------------|
+| Atlanta           |     45308685 |
+| Los Angeles       |     32427115 |
+| Chicago           |     32278906 |
+| Dallas-Fort Worth |     27100656 |
+| Denver            |     25497348 |
+
+
+
+This is the next set
+
+
+
+
+#+NAME: dir-pie
+#+BEGIN_SRC R :file pie.png :exports both :results graphics
+  a <- rnorm(500)
+  hist(a)
+
+#+END_SRC
+
+#+RESULTS: dir-pie
+[[file:pie.png]]
+

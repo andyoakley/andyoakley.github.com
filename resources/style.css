@@ -111,9 +111,12 @@ blockquote {
 
 
 code {
-    background: #0e0e0e;
+/*    background: #545454;
+    color: white; */
     padding: 2px;
+    border: 1px dotted #d0d0d0;
 }
+
 
 .org-src-container {
     background: #545454;

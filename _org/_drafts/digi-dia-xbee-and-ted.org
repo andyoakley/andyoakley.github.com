@@ -1,0 +1,22 @@
+#+BEGIN_HTML
+---
+layout: post
+categories:
+ - Xbee
+title: Digi Dia driver for The Energy Detective
+---
+#+END_HTML
+
+
+
+
+Baud rate 1200
+
+
+House code
+
+Checksum
+
+Link to previous post
+
+Include yml
