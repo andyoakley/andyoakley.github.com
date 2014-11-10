@@ -36,3 +36,4 @@ gpg-connect-agent learn /bye
 
 #+END_SRC
 
+http://forum.yubico.com/viewtopic.php?f=26&t=1000&start=10

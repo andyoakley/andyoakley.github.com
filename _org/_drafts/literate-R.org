@@ -1,12 +1,8 @@
-#+BEGIN_HTML
----
-layout: post
-tags: R
-title: Airport extraction
----
-#+END_HTML
 
-#+BEGIN_SRC R 
+
+
++NAME: top5
++BEGIN_SRC R :colnames yes :results value :exports both
   # Load wikipedia airports
   library(XML)
   tables <- readHTMLTable('http://en.wikipedia.org/wiki/List_of_airports_in_the_United_States')
@@ -32,5 +28,32 @@ title: Airport extraction
 
   #airports$foo <- apply(airports, FUN=nchar(City))
   #apply(airports$City, FUN=nchar)
++END_SRC
+
+This is the output
+#+RESULTS: top5
+| City              | Enplanements |
+|-------------------+--------------|
+| Atlanta           |     45308685 |
+| Los Angeles       |     32427115 |
+| Chicago           |     32278906 |
+| Dallas-Fort Worth |     27100656 |
+| Denver            |     25497348 |
+
+
+
+This is the next set
+
+
+
+
+#+NAME: dir-pie
+#+BEGIN_SRC R :file pie.png :exports both :results graphics
+  a <- rnorm(500)
+  hist(a)
+
 #+END_SRC
+
+#+RESULTS: dir-pie
+[[file:pie.png]]
 

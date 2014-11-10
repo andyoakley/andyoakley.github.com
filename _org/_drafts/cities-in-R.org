@@ -1,0 +1,45 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Cities in R
+---
+#+END_HTML
+
+
+#+BEGIN_SRC R
+
+
+
+# cities
+# https://www.census.gov/popest/data/cities/totals/2013/files/SUB-EST2013_ALL.csv
+cities <- read.csv("cities.csv", stringsAsFactors=FALSE)
+nrow(cities)
+head(cities)
+str(cities)
+
+                                        # remove states which would otherwise overinflate
+# this is not a good idea, these things don't sum cleanly
+cities <- subset(cities, SUMLEV == 162)
+
+sum(cities$POPESTIMATE2013)
+
+head(cities)
+
+cities$NAME <- gsub(" city", "", cities$NAME)
+cities$NAME <- gsub(" town", "", cities$NAME)
+
+cities[cities$NAME == 'Seattle', ]
+
+# bar plot
+states <- tapply(cities$POPESTIMATE2013, cities$STNAME, sum)
+states
+
+
+# order by most populous
+states <- aggregate(cities$POPESTIMATE2013, by=list(State=cities$STNAME), FUN=sum)
+states[order(-states$x),]
+
+barplot(factor(cities$STNAME), cities$POPESTIMATE2013)
+
+factor(cities$STNAME)        
+#+END_SRC
