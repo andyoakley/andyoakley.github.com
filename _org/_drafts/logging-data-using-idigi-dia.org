@@ -1,0 +1,17 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Logging data using iDigi Dia
+---
+#+END_HTML
+
+
+Background - what is Dia, why is it used
+
+Presentation basics
+
+* Operate on value change
+
+Alternatives
+
+* Interval

@@ -1,5 +1,9 @@
-
-
+#+BEGIN_HTML
+---
+layout: post
+title: Xbee motion detector
+---
+#+END_HTML
 
 Xbee motion detector
 

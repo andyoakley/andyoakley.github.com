@@ -1,0 +1,8 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Simpsons Paradox
+---
+#+END_HTML
+
+One of my favorites
