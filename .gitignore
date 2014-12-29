@@ -1,6 +1,6 @@
 .DS_Store
 _site/
 
-# published by org instead
+# published by org from _org instead
 madagascar/
-
+_drafts/
