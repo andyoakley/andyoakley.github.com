@@ -1,0 +1,16 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Tiny expansion in emacs
+---
+#+END_HTML
+
+#+BEGIN_SRC emacs-lisp
+
+
+(require 'tiny)
+
+# rows 1-24
+
+m\n23||%(1+ x)|||
+#+END_SRC

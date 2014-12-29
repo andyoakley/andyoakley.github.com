@@ -1,0 +1,9 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Favorite idioms
+---
+#+END_HTML
+
+The Cobra Effect
+Chinese Firedrill

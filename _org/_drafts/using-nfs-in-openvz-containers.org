@@ -1,0 +1,8 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Using NFS in openvz containers
+---
+#+END_HTML
+
+FEATURES="nfs:on" in vz configuration

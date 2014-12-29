@@ -1,0 +1,9 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Starting Synergy clients automatically
+---
+#+END_HTML
+
+/etc/gdm/Init/Default on linux
+/Library/LaunchAgents/org.synergy-project.session.plist

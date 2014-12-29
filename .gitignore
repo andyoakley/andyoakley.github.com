@@ -1,6 +1,6 @@
-.DS_Store
-_site/
+# generated output
+/_site/
 
 # published by org from _org instead
-madagascar/
-_drafts/
+/madagascar/
+/_drafts/

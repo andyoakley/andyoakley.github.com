@@ -1,0 +1,6 @@
+#+BEGIN_HTML
+---
+layout: post
+title: My org-mode workflow
+---
+#+END_HTML
