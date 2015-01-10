@@ -1,8 +1,13 @@
+#+BEGIN_HTML
+---
+layout: post
+title: Literate programming example
+---
+#+END_HTML
 
 
-
-+NAME: top5
-+BEGIN_SRC R :colnames yes :results value :exports both
+#+NAME: top5
+#+BEGIN_SRC R :colnames yes :results value :exports both
   # Load wikipedia airports
   library(XML)
   tables <- readHTMLTable('http://en.wikipedia.org/wiki/List_of_airports_in_the_United_States')
@@ -28,7 +33,7 @@
 
   #airports$foo <- apply(airports, FUN=nchar(City))
   #apply(airports$City, FUN=nchar)
-+END_SRC
+#+END_SRC
 
 This is the output
 #+RESULTS: top5
